@@ -1,0 +1,17 @@
+# config.yaml
+defaults:  
+  - override hydra/hydra_logging: disabled  
+  - override hydra/job_logging: disabled
+
+hydra:
+  run:
+    dir: "."  # 出力ディレクトリを無効にする
+
+data:
+  xlsx_path: "../data/sensyn.xlsx"
+  table_num: 9
+  job_field_str_list: ["consul", "sol", "dev", "field", "bizmanage"]
+  job_class_str: "job_class"
+
+logger:
+  console_debug: False
