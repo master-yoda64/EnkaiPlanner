@@ -11,10 +11,10 @@ window.onload = function() {
         .then(data => {
             const strings = data.split(',');
             strings.forEach((string) => {
-                console.log(string);
                 const tableCircle = document.createElement('div');
                 tableCircle.classList.add('table-circle');
-                tableCircle.textContent = Number(string) + 1;
+                var ascii = (Number(string) + 65 - 1) + 1;
+                tableCircle.textContent = String.fromCharCode(ascii);
                 tableCircle.style.left = `${Number(string)*100}px`;
                 tableCircle.style.top = `0px`;
         

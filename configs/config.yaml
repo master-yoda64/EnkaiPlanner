@@ -14,4 +14,4 @@ data:
   job_class_str: "job_class"
 
 logger:
-  console_debug: False
+  console_debug: True

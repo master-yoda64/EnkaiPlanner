@@ -19,6 +19,7 @@ Test local PC spec
 | CPU | Intel(R) Core(TM) i7-12700H|
 | GPU  | NVIDIA GeForce RTX 3060 |
 | dcoker | Docker version 25.0.4, build 1a576c5 |
+| Browser | google chrome |
 
 ## How to use
 
@@ -26,5 +27,6 @@ Test local PC spec
 $ git clone git@github.com:master-yoda64/EnkaiPlanner.git
 $ cd EnkaiPlanner
 $ poetry install --no-root
-$ poetry run python3 src/main.py
+$ cd app
+$ poetry run python3 flask_run.py
 ```

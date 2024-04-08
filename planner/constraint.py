@@ -22,3 +22,9 @@ def most_row_capability(x: cp.Variable, capability: int) -> List[cp.Expression]:
 def least_row_capability(x: cp.Variable, capability: int) -> List[cp.Expression]:
     # テーブルはcapability人以上
     return [cp.sum(x[i, :]) >= capability for i in range(0, x.shape[0])]
+
+def set_person2row(x, table_num: int, personal_id :int) -> List[cp.Expression]:
+    return [cp.sum(x[table_num, personal_id]) == 1]
+
+def ng_pair(x: cp.Variable, ng_pair: List[List[int]]) -> List[cp.Expression]:
+    return [cp.sum([x[i, ng_pair[0]], x[i, ng_pair[1]]]) == 0 for i in range(0, x.shape[0])]

@@ -23,6 +23,12 @@ def get_personal_ids_of_job_class(df: pd.DataFrame, job_class_str: str, job_clas
     name_list = get_data_from_df(df, ["name"])[personal_ids].ravel().tolist()
     return personal_ids, name_list
 
+def get_personal_ids_of_names(df: pd.DataFrame, names: List[str]) -> Tuple[List[int], List[str]]:
+    # Excelファイルを読み込む
+    personal_ids = list(df[df["name"].isin(names)].index)
+    name_list = get_data_from_df(df, ["name"])[personal_ids].ravel().tolist()
+    return personal_ids, name_list
+
 def test():
     # Excelファイルを読み込む
     df: pd.DataFrame = pd.read_excel("sensyn.xlsx")

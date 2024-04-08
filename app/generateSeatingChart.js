@@ -33,7 +33,6 @@ var people = [];
       .then(csv => {
           const csvData = csv.split('\n').map((row) => row.split(','));
           csvData.forEach((personal_data) => {
-            console.log(personal_data);
             var personcsv = { 
               name: personal_data[1],
               category: personal_data[0]
@@ -48,9 +47,6 @@ var people = [];
             }
             peopleByCategory[person.category].push(person);
           });
-          console.log(peopleByCategory);
           // ページにテーブルを表示
           createTable(peopleByCategory);
       });
-
-  console.log(people);
