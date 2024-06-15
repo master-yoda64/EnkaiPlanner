@@ -10,7 +10,7 @@ hydra:
 data:
   xlsx_path: "../data/sensyn.xlsx"
   table_num: 9
-  job_field_str_list: ["consul", "sol", "dev", "field", "bizmanage"]
+  job_field_str_list: ["group1", "group2", "group3", "group4", "group5"]
   job_class_str: "job_class"
 
 logger:
